@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מהו משחק? - משחק ומשחקיות</title>
+    <title>סוגי משחקים - משחק ומשחקיות</title>
     <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -33,46 +33,50 @@
             </ul>
         </aside>
         <section class="content-section">
-            <h1>מהו משחק?</h1>
+            <h1>סוגי משחקים</h1>
             
             <div class="theory-box">
-                <h2>הגדרות מרכזיות</h2>
-                <div class="definition-card">
-                    <h3>הויזינחה</h3>
-                    <p>מגדיר משחק כ"פעילות חופשית, מודעת, הנמצאת מחוץ לחיים הרגילים, אך לא רצינית, ומסוגרת בזמן ובמקום בתוך גבולות מוגדרים".</p>
+                <h2>קטגוריות משחקים</h2>
+                <div class="game-category">
+                    <h3>משחקי פעולה (Action Games)</h3>
+                    <p>משחקים המתמקדים באתגרים פיזיים, מהירות תגובה וקואורדינציה.</p>
+                    <div class="examples">
+                        <span>דוגמאות: Call of Duty, Super Mario</span>
+                    </div>
                 </div>
-                <div class="definition-card">
-                    <h3>פינק</h3>
-                    <p>מתמקד במשחק ככלי לפיתוח יצירתיות וחדשנות, כפעילות המאפשרת חשיבה מחוץ לקופסה.</p>
+                <div class="game-category">
+                    <h3>משחקי אסטרטגיה (Strategy Games)</h3>
+                    <p>משחקים הדורשים תכנון, ניהול משאבים וקבלת החלטות.</p>
+                    <div class="examples">
+                        <span>דוגמאות: Civilization, StarCraft</span>
+                    </div>
                 </div>
-                <div class="definition-card">
-                    <h3>קאלווה</h3>
-                    <p>מדגיש את האלמנטים החברתיים והתרבותיים של המשחק, ככלי לבניית קהילה ותרבות.</p>
+                <div class="game-category">
+                    <h3>משחקי תפקידים (RPG)</h3>
+                    <p>משחקים המתמקדים בהתפתחות דמות, סיפור ועולם עשיר.</p>
+                    <div class="examples">
+                        <span>דוגמאות: The Witcher, Final Fantasy</span>
+                    </div>
                 </div>
             </div>
 
             <div class="interactive-section">
                 <h2>פעילות אינטראקטיבית</h2>
-                <div class="memory-game">
-                    <h3>משחק זיכרון - התאמת הגדרות</h3>
-                    <div class="memory-grid">
-                        <!-- יתווסף דרך JavaScript -->
-                    </div>
-                </div>
-            </div>
-
-            <div class="examples-section">
-                <h2>דוגמאות מהעולם</h2>
-                <div class="example-cards">
-                    <div class="example-card">
-                        <img src="../assets/game-example1.jpg" alt="דוגמה למשחק מסורתי">
-                        <h3>משחקים מסורתיים</h3>
-                        <p>משחקי ילדים, משחקי קופסה, משחקי ספורט</p>
-                    </div>
-                    <div class="example-card">
-                        <img src="../assets/game-example2.jpg" alt="דוגמה למשחק דיגיטלי">
-                        <h3>משחקים דיגיטליים</h3>
-                        <p>משחקי מחשב, משחקי מובייל, משחקי מציאות מדומה</p>
+                <div class="game-classification">
+                    <h3>סיווג משחקים</h3>
+                    <div class="classification-game">
+                        <div class="game-card" draggable="true">
+                            <h4>Minecraft</h4>
+                            <p>משחק בנייה והרפתקאות</p>
+                        </div>
+                        <div class="game-card" draggable="true">
+                            <h4>Chess</h4>
+                            <p>משחק אסטרטגיה קלאסי</p>
+                        </div>
+                        <div class="game-card" draggable="true">
+                            <h4>FIFA</h4>
+                            <p>סימולציית ספורט</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,6 +95,6 @@
     </footer>
 
     <script src="../script.js"></script>
-    <script src="game-definition.js"></script>
+    <script src="game-types.js"></script>
 </body>
 </html> 

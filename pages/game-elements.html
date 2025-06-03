@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מרכיבי המשחק - משחקים ומשחקיות במדיה המודרנית</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">🎮 <a href="../index.html" style="color:#6c63ff;text-decoration:none;font-weight:700;">משחק ומשחקיות</a></div>
+            <ul>
+                <li><a href="../index.html">דף הבית</a></li>
+                <li><a href="topics.html">נושאי לימוד</a></li>
+                <li><a href="quizzes.html">שאלות ותרגול</a></li>
+                <li><a href="summaries.html">סיכומים</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="learning-map">
+            <h3>מפת לימוד</h3>
+            <ul>
+                <li><a href="game-definition.html">הגדרת משחק</a></li>
+                <li><a href="game-types.html">סוגי משחקים</a></li>
+                <li><a href="game-elements.html">מרכיבי המשחק</a></li>
+                <li><a href="identity-games.html">זהות ומשחק</a></li>
+                <li><a href="digital-media.html">משחק במדיה דיגיטלית</a></li>
+                <li><a href="game-history.html">היסטוריה של משחקי מחשב</a></li>
+            </ul>
+        </aside>
+
+        <section class="content-section">
+            <h1>מרכיבי המשחק</h1>
+            
+            <div class="theory-box">
+                <h2>מרכיבי המשחק לפי רוג'ר קאילואה</h2>
+                <p>רוג'ר קאילואה זיהה ארבעה מרכיבים מרכזיים במשחקים:</p>
+                <ul>
+                    <li><strong>Agon (תחרות):</strong> משחקים תחרותיים המבוססים על שוויון הזדמנויות</li>
+                    <li><strong>Alea (מזל):</strong> משחקים המבוססים על גורל ומזל</li>
+                    <li><strong>Mimicry (חיקוי):</strong> משחקי תפקידים והעמדת פנים</li>
+                    <li><strong>Ilinx (סחרור):</strong> חיפוש אחר תחושות חזקות וסחרור</li>
+                </ul>
+            </div>
+
+            <div class="theory-box">
+                <h2>מרכיבי המשחק לפי יוהאן הויזינחה</h2>
+                <p>הויזינחה זיהה מספר מאפיינים מרכזיים:</p>
+                <ul>
+                    <li>פעילות חופשית</li>
+                    <li>מנותקת מהחיים הרגילים</li>
+                    <li>מתקיימת במרחב וזמן מוגדרים</li>
+                    <li>נהלת לפי כללים מוסכמים</li>
+                </ul>
+            </div>
+
+            <div class="interactive-element">
+                <h3>מבחן ידע</h3>
+                <div id="quiz-container">
+                    <div class="quiz-question">
+                        <p>איזה מרכיב משחק מתאר את המשחקים הבאים?</p>
+                        <ul>
+                            <li>שחמט</li>
+                            <li>פוקר</li>
+                            <li>משחקי תפקידים</li>
+                            <li>רכבות הרים</li>
+                        </ul>
+                        <div class="quiz-options">
+                            <button onclick="checkAnswer('agon')">תחרות (Agon)</button>
+                            <button onclick="checkAnswer('alea')">מזל (Alea)</button>
+                            <button onclick="checkAnswer('mimicry')">חיקוי (Mimicry)</button>
+                            <button onclick="checkAnswer('ilinx')">סחרור (Ilinx)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 משחקים ומשחקיות במדיה המודרנית</p>
+    </footer>
+
+    <script src="game-elements.js"></script>
+</body>
+</html> 
