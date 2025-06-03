@@ -483,4 +483,115 @@ footer {
 /* --- תנועתיות לאלמנטים --- */
 .animate, .topic-card, .video-card, .quiz-card, .example-card, .game-card, .timeline-item {
     animation: fadeIn 0.7s cubic-bezier(.39,.575,.56,1) both;
+}
+
+/* --- עיצוב מודל קופץ (modal) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(44, 62, 80, 0.65);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s;
+}
+.modal {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+    max-width: 400px;
+    width: 90vw;
+    padding: 2.5rem 2rem 1.5rem 2rem;
+    position: relative;
+    z-index: 10000;
+    animation: popIn 0.3s;
+}
+.modal-content h3 {
+    color: #6c63ff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    text-align: right;
+}
+.modal-content ul {
+    margin: 1rem 0 0 0;
+    padding-right: 1.2rem;
+}
+.modal-content button.close-modal {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+    z-index: 10001;
+}
+.modal-content button.close-modal:hover {
+    color: #6c63ff;
+}
+@keyframes popIn {
+    from { opacity: 0; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* --- המבורגר ניווט --- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    z-index: 1001;
+    background: none;
+    border: none;
+    margin-right: 1rem;
+}
+.hamburger span {
+    height: 4px;
+    width: 28px;
+    background: #6c63ff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+    display: block;
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        width: 220px;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 5rem 1.5rem 2rem 1.5rem;
+        box-shadow: -2px 0 16px rgba(44,62,80,0.08);
+        transition: right 0.3s cubic-bezier(.39,.575,.56,1);
+        z-index: 1000;
+        text-align: right;
+    }
+    nav ul.open {
+        right: 0;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* אנימציה להמבורגר פתוח */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
 } 

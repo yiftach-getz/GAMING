@@ -35,21 +35,28 @@ const examplesData = {
 // הצגת פרטים על דוגמה
 function showDetails(exampleId) {
     const data = examplesData[exampleId];
+    // צור overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.onclick = function(e) {
+        if (e.target === overlay) overlay.remove();
+    };
+
+    // צור מודל
     const modal = document.createElement('div');
     modal.className = 'modal';
-    
     modal.innerHTML = `
         <div class="modal-content">
+            <button class="close-modal" title="סגור" onclick="this.closest('.modal-overlay').remove()">×</button>
             <h3>${data.title}</h3>
             <p>${data.description}</p>
             <ul>
                 ${data.features.map(feature => `<li>${feature}</li>`).join('')}
             </ul>
-            <button onclick="this.parentElement.parentElement.remove()">סגור</button>
         </div>
     `;
-    
-    document.body.appendChild(modal);
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
 }
 
 // הוספת אנימציות

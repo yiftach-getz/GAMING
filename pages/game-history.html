@@ -10,6 +10,11 @@
     <header>
         <nav>
             <div class="logo">🎮 <a href="../index.html" style="color:#6c63ff;text-decoration:none;font-weight:700;">משחק ומשחקיות</a></div>
+            <button class="hamburger" aria-label="פתח תפריט" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul>
                 <li><a href="../index.html">דף הבית</a></li>
                 <li><a href="topics.html">נושאי לימוד</a></li>
@@ -110,5 +115,21 @@
     </footer>
 
     <script src="game-history.js"></script>
+    <script>
+    // המבורגר ניווט
+    const hamburger = document.querySelector('.hamburger');
+    const navUl = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navUl.classList.toggle('open');
+    });
+    // סגירה בלחיצה על קישור
+    navUl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            navUl.classList.remove('open');
+        });
+    });
+    </script>
 </body>
 </html> 

@@ -11,6 +11,11 @@
     <header>
         <nav>
             <div class="logo">🎮 משחק ומשחקיות</div>
+            <button class="hamburger" aria-label="פתח תפריט" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <ul>
                 <li><a href="#home">דף הבית</a></li>
                 <li><a href="#topics">נושאי לימוד</a></li>
@@ -69,16 +74,16 @@
             <h2>סרטוני לימוד</h2>
             <div class="video-grid">
                 <div class="video-card">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/8tPnX7OPo0Q" frameborder="0" allowfullscreen></iframe>
-                    <h3>מבוא למשחקיות - מה זה בכלל?</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vGIPlnpVllI" frameborder="0" allowfullscreen></iframe>
+                    <h3>How gamification and AI will shape the future of education</h3>
                 </div>
                 <div class="video-card">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6JfD15jd6Zw" frameborder="0" allowfullscreen></iframe>
-                    <h3>היסטוריית משחקי המחשב - מסע בזמן</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3MTvmUr3RAE" frameborder="0" allowfullscreen></iframe>
+                    <h3>Learning, Gamification, and Data (2024)</h3>
                 </div>
                 <div class="video-card">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2lUZt5y80O4" frameborder="0" allowfullscreen></iframe>
-                    <h3>משחוק (Gamification) - איך זה עובד?</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/v5Qjuegtiyc" frameborder="0" allowfullscreen></iframe>
+                    <h3>Gamification to improve our world | Yu-kai Chou | TEDx</h3>
                 </div>
             </div>
         </section>
@@ -100,5 +105,21 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+    // המבורגר ניווט
+    const hamburger = document.querySelector('.hamburger');
+    const navUl = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        navUl.classList.toggle('open');
+    });
+    // סגירה בלחיצה על קישור
+    navUl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            navUl.classList.remove('open');
+        });
+    });
+    </script>
 </body>
 </html> 
